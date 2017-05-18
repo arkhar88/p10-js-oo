@@ -1,1 +1,135 @@
+@import url( 'https://fonts.googleapis.com/css?family=Baloo');
+@import url( 'https://fonts.googleapis.com/css?family=Pacifico');
+@import url( 'https://fonts.googleapis.com/css?family=Catamaran');
+$card-height: 60px;
+$colummn-width: 400px;
+$card-list-color: #FFF3C5;
+$card-color: #FFB817;
+$card-color-hover: #008CB2;
+$btn-add-card-color: #07233c;
+$btn-delete-column-color: #860000;
+$btn-delete-card-color: #FF6900;
 
+h1 {
+    font-family: 'Baloo', cursive;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 60px 0;
+    color: $btn-add-card-color;
+}
+
+#board {
+    text-align: center;
+}
+
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column-title {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-top: 80px;
+    font-family: 'Baloo', cursive;
+    color: $btn-add-card-color;
+}
+
+.column {
+    position: relative;
+    background-color: #ededed;
+    width: $colummn-width;
+    margin: 12px;
+}
+
+button {
+    font-family: 'Pacifico', cursive;
+    border: none;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    background: $btn-add-card-color;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.create-column {
+    font-size: 30px;
+    margin-bottom: 15px;
+    height: 80px;
+    width: 260px;
+}
+
+.create-column:hover {
+    background-color: lighten($btn-add-card-color, 15%);
+}
+
+.column > .btn-delete {
+    position: absolute;
+    display: block;
+    right: 0;
+    background: $btn-delete-column-color;
+}
+
+.column > .btn-delete:hover {
+    background: lighten($btn-delete-column-color, 15%);
+}
+
+.add-card {
+    display: block;
+    position: absolute;
+}
+
+.add-card:hover {
+    background-color: lighten($btn-add-card-color, 15%);
+}
+
+.column-card-list {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    background-color: $card-list-color;
+    margin: 0 10px 20px;
+    padding: 0;
+    width: $colummn-width - 20px;
+    min-height: 200px;
+    height: auto;
+}
+
+.column-card-list li {
+    display: block;
+    background-color: $card-color;
+    height: $card-height;
+    margin-bottom: 8px;
+}
+
+.column-card-list li:hover {
+    background-color: $card-color-hover;
+}
+
+.column-card-list li > p {
+    font-family: 'Catamaran', cursive;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    line-height: $card-height;
+}
+
+.column-card-list li > .btn-delete {
+    position: absolute;
+    display: block;
+    background-color: $btn-delete-column-color;
+    height: 30px;
+    width: 30px;
+    line-height: 10px;
+    right: 0;
+    padding: 10px;
+}
+
+.column-card-list li > .btn-delete:hover {
+    background-color: lighten($btn-delete-column-color, 15%);
+}
